@@ -1,4 +1,4 @@
-#Diamond star pattern
+#Hollow diamond star pattern
 
 size = int(input('Enter a number: '))
 

@@ -1,3 +1,4 @@
+#Date: 25-08-2023
 #Square Pattern in Python
 size = int(input('Enter a number: '))
 

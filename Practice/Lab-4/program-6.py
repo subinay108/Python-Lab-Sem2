@@ -10,6 +10,6 @@ for i in range(len(l)):
         if l[j] > l[j + 1]:
             l[j], l[j + 1] = l[j + 1], l[j]
         
-
+ 
 
 print('The list in sorted order:', l)

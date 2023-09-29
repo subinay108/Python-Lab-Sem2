@@ -8,10 +8,20 @@ def pprint(arr):
             print(j, end = '  ')
         print()
 
+# Fill the square with 0
 square = []
-
 for i in range(n):
     square.append([0] * n)
+
+if n % 2 != 0: # odd order
+    pass
+else:
+    if n % 4 == 0: # Doubly even order
+        pass
+    else: # Singly even order
+        pass
+
+
 
 row = n // 2
 col = n - 1

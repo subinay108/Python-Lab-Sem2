@@ -38,13 +38,32 @@ def doublyEvenOrderSolve():
     square[n//2 - 1][n//2 - 1], square[n//2][n//2] = square[n//2][n//2], square[n//2 - 1][n//2 - 1]
     square[n//2 - 1][n//2], square[n//2][n//2 - 1] = square[n//2][n//2 - 1], square[n//2 - 1][n//2]
     
+def exchangeColumns(col):
+    for row in range(n // 2):
+        square[row][col], square[row + n // 2][col] = square[row + n // 2][col], square[row][col]
+
 def singlyEvenOrderSolve():
     # divide the square into four parts and solve odd order
+    step = (n // 2) ** 2
     oddOrderSolve(0, 0, 1, n // 2)
-    oddOrderSolve(1, 1, 10,  n // 2)
-    oddOrderSolve(0, 1, 19, n // 2)
-    oddOrderSolve(1, 0, 28, n // 2)
+    oddOrderSolve(1, 1, 1 + step,  n // 2) # 
+    oddOrderSolve(0, 1, 1 + 2 * step, n // 2)
+    oddOrderSolve(1, 0, 1 + 3 * step, n // 2)
     
+    # n = 4k + 2
+    k = n // 4
+
+    # exchange first k coloumns
+    for i in range(k):
+        exchangeColumns(i)
+
+    # exchange middle cell of first and (k + 1)th column
+    square[n//4][0], square[n//4 + n//2][0] = square[n//4 + n//2][0], square[n//4][0]
+    square[n//4][k], square[n//4 + n//2][k] = square[n//4 + n//2][k], square[n//4][k]
+    
+    # exchange last k - 1 columns
+    for i in range(k - 1):
+        exchangeColumns(n - i - 1)
 
 # Fill the square with 0
 square = []
@@ -58,4 +77,8 @@ elif n % 4 == 0: # Doubly even order
 else: # Singly even order
     singlyEvenOrderSolve()
 
-pprint(square)
+
+if n == 2:
+    print('Magic Square of order 2 is not possible')
+else:
+    pprint(square)

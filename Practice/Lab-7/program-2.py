@@ -3,8 +3,6 @@
 # If the employee's salary is input through the keyboard, write a program to find his gross salary.
 salary = int(input('Enter Salary: '))
 
-HRA = DA = 0
-
 if salary < 1500:
     HRA = salary * 0.1
     DA = salary * 0.9

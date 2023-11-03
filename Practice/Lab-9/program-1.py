@@ -4,6 +4,8 @@
 # Append a name 'Zulu'
 # Delete 'Avi' from the list
 # Replace 'Anil' with 'Anil Kumar'
+# Sort all the names in the list
+# print reveresed sorted list
 
 l = ['Anil', 'Amol', 'Aditya', 'Avi', 'Alka']
 
@@ -17,4 +19,8 @@ l.remove('Avi')
 pos = l.index('Anil')
 l[pos] = 'Anil Kumar'
 
+l.sort()
+print(l)
+
+l.reverse()
 print(l)

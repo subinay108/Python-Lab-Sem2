@@ -1,6 +1,6 @@
 # Write a program that prints all unique combinations of 1, 2 and 3
 
-s = '123456'
+s = '123'
 arr = []
 def permute(a):
     # base condition
@@ -15,7 +15,7 @@ def permute(a):
 
 permute('')
 
-print(len(arr))
+# print(len(arr))
 
-# for i in arr:
-#     print(i) 
+for i in arr:
+    print(i) 

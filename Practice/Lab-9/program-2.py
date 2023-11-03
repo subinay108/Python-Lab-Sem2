@@ -14,10 +14,10 @@ l2 = [2, 4, 6, 8, 10]
 l = l1 + l2
 
 l = [11, 17, 29] + l
+print(l)
 
 print(len(l))
 
-print(l)
 l = l[:-3] + [100, 200, 300]
 print(l)
 

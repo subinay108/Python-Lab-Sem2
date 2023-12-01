@@ -1,4 +1,4 @@
-# WAP that defines a function inspalindrome() which checks whether a given string is a palindrome or
+# WAP that defines a function ispalindrome() which checks whether a given string is a palindrome or
 # not. Ignore spaces and case mismatch while checking for palindrome
 
 string = input('Enter a string: ')

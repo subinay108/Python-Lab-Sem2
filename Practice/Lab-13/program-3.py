@@ -15,7 +15,7 @@ class Time:
     def multiply(self, m):
         self.hour *= m
         self.minute *= m
-        self.minute *= m
+        self.second *= m
         self.normalize()
     
     def display(self):

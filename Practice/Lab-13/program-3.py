@@ -27,12 +27,6 @@ class Time:
         self.minute = (seconds // 60) % 60
         self.hour = seconds // 3600
 
-
-    @staticmethod
-    def timeToSeconds(hour, minute, second):
-        return 
-
-
 t1 = Time(2, 35, 45)
 t2 = Time(1, 42, 35)
 

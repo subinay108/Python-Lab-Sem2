@@ -6,6 +6,14 @@ def radixSort(a):
     for i in range(10):
         numDict[i] = []
     
+    # get the no. of digits of highest number
+    maxDigits = len(str(max(a)))
+
+    divisor = 10 ** maxDigits
+    while divisor > 0:
+        
+        divisor //= 10
+    
 
 arr = list(range(1, 11))
 shuffle(arr)
